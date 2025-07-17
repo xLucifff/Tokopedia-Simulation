@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            color: #fff;
+        }
+
+        .box-small {
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+
+        .box-large {
+            width: 550px;
+            height: 550px;
+            background: green;
+        }
+
+        .position-fixed {
+            position: fixed;
+        }
+
+        .position-with-topleft-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #position-relative {
+            position: relative;
+            margin-left: 500px;
+            margin-top: 500px;
+        }
+
+        .position-absolute {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body style="height: 500vh">
+
+    <div class="position-fixed box-small">
+        position fixed diluar position relative | tanpa top dan left
+    </div>
+
+    <div class="position-fixed box-small position-with-topleft-fixed">
+        position fixed diluar position relative | top: 0, left: 0
+    </div>
+
+    <div class="position-absolute box-small">
+        position absolute diluar position relative | top: 0, right: 0
+    </div>
+
+    <div id="position-relative" class="box-large" style="background: purple">
+
+    </div>
+
+    <div id="position-relative" class="box-large">
+
+        <div class="position-absolute box-small">
+            position absolute diluar position relative | top: 0, right: 0
+        </div>
+    </div>
+
+    <div id="position-relative" class="box-large" style="background: purple">
+
+    </div>
+</body>
+</html>

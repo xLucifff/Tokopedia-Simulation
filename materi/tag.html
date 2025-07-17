@@ -1,0 +1,43 @@
+<!-- 
+    <html>
+        <head></head>
+        <body></body>
+    </html>
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- external -->
+    <!-- .. -> mundur -->
+    <!-- . -> sejajar -->
+    <link rel="stylesheet" href="../card-product.css" />
+    <!-- internal -->
+    <style>
+        span {background: red;}
+        /* class: power 10 */
+        /* div yg memiliki class tag-div2 power 11*/
+        div.tag-div2 { background: green }
+        /* tag : power 1 */
+        div { background: red }
+
+        /* 3 tag : power 3 */
+        div > div > div {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <span> tag span </span>
+    <div> tag div 1 </div>
+    <div class="tag-div2"> tag div 2 </div>
+    <div>
+        <div>
+            <div class="tag-div2">div 3 </div>
+        </div>
+    </div>
+</body>
+</html>
