@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+}
+
+#right-side, #right-side > a:first-child {
+    display: flex;
+    align-items: center;
+}
+
+/* 
+    spasi : akses sampe sluruh keturunan
+    > : akses anak
+*/
+
+#right-side a {
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#right-side > a:nth-child(1) > img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+#divider {
+    height: 20px;
+    width: 1px;
+    background: rgba(0,0,0,.7);
+    /* margin-left: 10px;
+    margin-right: 10px; */
+
+    /* atas bawah 0px, kiri kanan 10px */
+    margin: 0px 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* section1 */
+
+#section1 {
+    width: 100%;
+    max-width: 1440px;
+    height: 300px;
+    background-image: url('./assets/contact_header_background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 64px;
+    margin-top: 10px;
+}
+
+#section1 > h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    /* 400 : regular */
+    /* 500 : semi medium */
+    /* 600 : medium */
+    /* 700 : bold */
+    color: rgba(0,0,0,.7);
+}
+
+#search-area {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+}
+
+#search-area > span, #search-area > input, #search-area > button {
+    height: 50px;
+    border: 0px;
+    outline: none;
+}
+
+#search-area > span {
+    background: white;
+    width:50px;
+    background-image: url(https://ecs7.tokopedia.net/assets-tokopedia-lite/prod/080ef4f5.png);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#search-area > input {
+    width: 100%;
+    font-size: 16px;
+    padding-right: 15px;
+}
+
+#search-area > button {
+    background-color: #ff5722;
+    color: #fff;
+    width: 84px;
+    font-size: 14px;
+    font-weight: 400;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* section2 */
+
+#section2 {
+    background-color: #fafbfc;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 4px;
+    /* atas bawah 16px, kiri kanan 24px */
+    padding: 16px 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section2 > div:first-child {
+    color: rgba(0,0,0,.7);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#section2 > div:nth-child(2) > button {
+    font-size: 13px;
+    height: 40px;
+    padding: 8px 48px;
+    color: white;
+    background: #03ac0e;
+    border-radius: 8px;
+}
+
+#section2 > div:nth-child(2) > a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #42b549;
+    font-weight: 600;
+}
+
+/* section 3 */
+
+#section3 {
+    margin-top: 50px;
+}
+
+#section3 > div:first-child {
+    font-size: 17px;
+    color: rgba(0,0,0,1);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+#list-topic {
+    display: flex;
+    justify-content: space-between;
+}
+
+#list-topic a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+#list-topic > a > img {
+    width: 64px;
+    margin-bottom: 8px;
+}
+
+/* #list-topic div */
+#list-topic > a > div {
+    color: rgba(0,0,0,.7);
+    font-size: 14px;
+}
+
+#list-topic > a:hover > img {
+    transform: translateY(-5px);
+    transition: all ease-in-out .3s;
+}
+
+#list-topic > a:hover > div {
+    color: #03ac0e;
+}
+
+#section4 {
+    border-top: 1px solid rgba(0,0,0,.12);
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section4 > img {
+    width: 80px;
+    margin-right: 20px;
+    padding: 40px 0px;
+}
+
+.faq_title {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.faq_desc {
+    font-size: 14px;
+    color: rgba(0,0,0,.7);
+    max-width: 315px;
+    margin-right: 20px;
+}
+
+#section4 > button {
+    font-size: 13px;
+    height: 40px;
+    padding: 8px 48px;
+    color: white;
+    background: #03ac0e;
+    font-weight: 600;
+    border-radius: 8px;
+}

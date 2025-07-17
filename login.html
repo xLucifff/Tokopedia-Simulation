@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Tokopedia :: Simulasi Tiga Langkah</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <div id="login-page">
+        <div id="logo-area">
+            <img id="logo-img" src="./assets/tokopedia_logo.svg" />
+        </div>
+
+        <div id="login-form-area">
+            <div id="form-wrapper">
+                <form id="form" action="login.php" method="POST">
+                    <div id="form-header">
+                        <h2>Masuk</h2>
+                        <a href="https://www.tokopedia.com/registrasi">Daftar</a>
+                    </div>
+
+                    <!-- STEP 1: Email -->
+                    <div id="step1">
+                        <div id="form-email">
+                            <label>Nomor Ponsel atau Email</label>
+                            <div>
+                                <input type="text" name="username" id="username" required />
+                            </div>
+                            <p>Contoh: email@tokopedia.com</p>
+                        </div>
+
+                        <div id="form-submit">
+                            <a href="#">Lupa Kata Sandi</a>
+                            <div>
+                                <button type="button" onclick="goToStep2()">Selanjutnya</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Password -->
+                    <div id="step2" style="display: none;">
+                        <div id="form-email">
+                            <label>Kata Sandi</label>
+                            <div>
+                                <input type="password" name="password" id="password" required />
+                            </div>
+                            <p>Minimal 6 karakter</p>
+                        </div>
+
+                        <div id="form-submit">
+                            <div>
+                                <button type="button" onclick="goToStep3()">Login</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: OTP -->
+                    <div id="step3" style="display: none;">
+                        <div id="form-email">
+                            <label>Kode Verifikasi (OTP)</label>
+                            <div>
+                                <input type="text" name="otp" id="otp" required />
+                            </div>
+                            <p>Kode verifikasi telah dikirim ke email Anda.</p>
+                        </div>
+
+                        <div id="form-submit">
+                            <div>
+                                <button type="submit">Verifikasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sosial login -->
+                    <div id="login-info">
+                        <div></div>
+                        <div>atau masuk dengan</div>
+                        <div></div>
+                    </div>
+
+                    <div id="login-by-google" class="login-by">
+                        <div>
+                            <img src="./assets/icons/google.svg" />
+                            <div>Google</div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div id="login-by-facebook" class="login-by">
+                        <div>
+                            <img src="./assets/icons/facebook.svg" />
+                            <div>Facebook</div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div id="info-tambahan">
+                        Belum punya akun Tokopedia? <a href="#">Daftar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToStep2() {
+            const email = document.getElementById("username").value.trim();
+            if (email === "") {
+                alert("Silakan masukkan email/nomor HP.");
+                return;
+            }
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
+        }
+
+        function goToStep3() {
+            const password = document.getElementById("password").value.trim();
+            if (password === "") {
+                alert("Silakan masukkan password.");
+                return;
+            }
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("step3").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

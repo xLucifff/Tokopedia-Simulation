@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>CSS Specifishity :: Codingseru</title>
+        <style>
+            /* * --> 0 */
+            /* tag --> 1 */
+            /* class --> 10 */
+            /* id --> 100 */
+            /* inline style --> 1000 */
+            /* important --> 10000 */
+
+            /* 100 */
+            #div-id {
+                background:red;
+            }
+
+            /* 1 */
+            div {
+                background: green;
+            }
+
+            /* 2 */
+            div > div {
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="div-id" style="background: purple;">
+                background div dengan id
+            </div>
+            <div>
+                background div tanpa id
+            </div>
+        </div>
+    </body>
+</html>
